@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional - M. Hasan Safii</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f19',
+                        cardDark: '#111827',
+                        accentBlue: '#3b82f6',
+                        accentCyan: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .font-code {
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Gradasi Hitam dan Biru Estetik */
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e3a8a 100%);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 dark">
+
+    <!-- Tombol Mode Gelap / Terang -->
+    <div class="fixed top-5 right-5 z-50">
+        <button onclick="toggleTheme()" class="glass-card px-4 py-2 rounded-full flex items-center gap-2 text-sm font-semibold shadow-lg hover:scale-105 transition-transform duration-300">
+            <i id="theme-icon" class="fa-solid fa-moon text-blue-400"></i>
+            <span id="theme-text">Mode Terang</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen bg-gradient-custom flex items-center justify-center relative overflow-hidden px-4 py-20">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-4xl mx-auto text-center z-10" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-block mb-4 px-4 py-1.5 rounded-full glass-card text-blue-400 text-sm font-medium">
+                <i class="fa-solid fa-code mr-2"></i> Professional Portfolio
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extxl font-bold tracking-tight mb-4">
+                Halo, Saya <span class="text-gradient">M. Hasan Safii</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 dark:text-slate-300 light:text-slate-700 max-w-2xl mx-auto mb-8">
+                Seorang Profesional di bidang Coding, Troubleshooting Komputer, dan Animator Kreatif yang berfokus pada estetika digital.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#kontak" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-xl shadow-lg shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5">
+                    <i class="fa-solid fa-address-book mr-2"></i> Hubungi Saya
+                </a>
+                <a href="#kemampuan" class="glass-card hover:bg-blue-600/10 font-medium px-6 py-3 rounded-xl transition-all duration-300">
+                    Lihat Portofolio <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Informasi Profil / Kontak & Alamat -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up">
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                <div class="bg-blue-500/10 p-3 rounded-xl text-blue-400 text-xl">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-400">Nomor Telepon / WhatsApp</h3>
+                    <p class="text-lg font-medium text-slate-100 dark:text-slate-100 light:text-slate-800">089697005455</p>
+                </div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+                <div class="bg-blue-500/10 p-3 rounded-xl text-blue-400 text-xl">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-400">Alamat Rumah</h3>
+                    <p class="text-lg font-medium text-slate-100 dark:text-slate-100 light:text-slate-800">Jalan Ahmad Yani, Desa Sumber Slorok, Kecamatan Garum, Kabupaten Blitar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Kemampuan -->
+    <section id="kemampuan" class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-3">Kemampuan & <span class="text-gradient">Keahlian</span></h2>
+            <p class="text-slate-400">Bidang keahlian profesional yang saya kuasai dan kembangkan.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Coding -->
+            <div class="glass-card rounded-2xl overflow-hidden group hover:border-blue-500 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Coding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-400 text-2xl mb-3"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Coding & Web Development</h3>
+                    <p class="text-slate-400 text-sm">Membangun aplikasi web, halaman landing page interaktif, serta implementasi logika pemrograman modern.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Troubleshooting Komputer -->
+            <div class="glass-card rounded-2xl overflow-hidden group hover:border-blue-500 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=600&q=80" alt="Troubleshooting Komputer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-400 text-2xl mb-3"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Troubleshooting Komputer</h3>
+                    <p class="text-slate-400 text-sm">Perbaikan perangkat keras (hardware), instalasi sistem operasi, pemeliharaan jaringan, dan optimalisasi performa PC/Laptop.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Animator -->
+            <div class="glass-card rounded-2xl overflow-hidden group hover:border-blue-500 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-48 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1626544827763-d516dce335e2?auto=format&fit=crop&w=600&q=80" alt="Animator" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-80"></div>
+                </div>
+                <div class="p-6">
+                    <div class="text-blue-400 text-2xl mb-3"><i class="fa-solid fa-clapperboard"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Animator Kreatif</h3>
+                    <p class="text-slate-400 text-sm">Merancang animasi visual, aset grafis, dan tata letak artistik digital yang estetik dan dinamis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Sertifikat (Berdasarkan Gambar PNG yang Diberikan) -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-3">Sertifikat & <span class="text-gradient">Pencapaian</span></h2>
+            <p class="text-slate-400">Sertifikat resmi yang telah diraih dari IBM SkillsBuild.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Sertifikat 1 -->
+            <div class="glass-card p-5 rounded-2xl group hover:border-blue-500 transition-all duration-300" data-aos="fade-up">
+                <div class="overflow-hidden rounded-xl mb-4 bg-slate-900 border border-slate-700">
+                    <img src="ai 4.png" alt="Sertifikat Career Management Essentials" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-blue-400 mb-1">Career Management Essentials</h3>
+                <p class="text-xs text-slate-400 mb-2">IBM SkillsBuild • Diterbitkan: 01 Okt 2025</p>
+                <p class="text-sm text-slate-300">ID: PLAN-B7F68A410C9C</p>
+            </div>
+
+            <!-- Sertifikat 2 -->
+            <div class="glass-card p-5 rounded-2xl group hover:border-blue-500 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="overflow-hidden rounded-xl mb-4 bg-slate-900 border border-slate-700">
+                    <img src="ai power recing.png" alt="Sertifikat Scuderia Ferrari HP Meets IBM Innovation: AI-Powered Racing" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-blue-400 mb-1">Scuderia Ferrari HP Meets IBM Innovation: AI-Powered Racing</h3>
+                <p class="text-xs text-slate-400 mb-2">IBM SkillsBuild • Diterbitkan: 09 Okt 2025 (10 Mins)</p>
+                <p class="text-sm text-slate-300">ID: ALM-COURSE_3955043</p>
+            </div>
+
+            <!-- Sertifikat 3 -->
+            <div class="glass-card p-5 rounded-2xl group hover:border-blue-500 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="overflow-hidden rounded-xl mb-4 bg-slate-900 border border-slate-700">
+                    <img src="ai.png" alt="Sertifikat AI Ethics" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-blue-400 mb-1">AI Ethics</h3>
+                <p class="text-xs text-slate-400 mb-2">IBM SkillsBuild • Diterbitkan: 27 Sep 2025 (1 Jam 45 Menit)</p>
+                <p class="text-sm text-slate-300">ID: MDL-220</p>
+            </div>
+
+            <!-- Sertifikat 4 -->
+            <div class="glass-card p-5 rounded-2xl group hover:border-blue-500 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="overflow-hidden rounded-xl mb-4 bg-slate-900 border border-slate-700">
+                    <img src="generative ai sertifity.png" alt="Sertifikat Introduction to Generative AI" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-blue-400 mb-1">Introduction to Generative AI</h3>
+                <p class="text-xs text-slate-400 mb-2">IBM SkillsBuild • Diterbitkan: 25 Sep 2025 (1 Jam 30 Menit)</p>
+                <p class="text-sm text-slate-300">ID: MDL-388</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobi & Minat -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-3">Hobi & <span class="text-gradient">Minat</span></h2>
+            <p class="text-slate-400">Aktivitas penunjang kreativitas dan inspirasi saya di waktu luang.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-6" data-aos="fade-right">
+                <div class="bg-blue-600/20 p-4 rounded-2xl text-blue-400 text-3xl">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-1">Baca Manga</h3>
+                    <p class="text-slate-400 text-sm">Menikmati berbagai alur cerita dan estetika visual seni ilustrasi komik Jepang.</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-6" data-aos="fade-left">
+                <div class="bg-blue-600/20 p-4 rounded-2xl text-blue-400 text-3xl">
+                    <i class="fa-solid fa-tv"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-1">Nonton Anime</h3>
+                    <p class="text-slate-400 text-sm">Menyaksikan serial animasi berkualitas tinggi yang memicu kreativitas desain animasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animasi C++ Interaktif (Simulasi Terminal) -->
+    <section class="py-16 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <h2 class="text-3xl font-bold mb-3">Simulasi Terminal <span class="text-gradient">C++</span></h2>
+            <p class="text-slate-400">Menjalankan skrip program C++ interaktif langsung di peramban.</p>
+        </div>
+
+        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl border border-blue-500/30" data-aos="zoom-in">
+            <!-- Window Bar -->
+            <div class="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                    <span class="text-xs text-slate-400 ml-2 font-code">portfolio_mhasansafii.cpp</span>
+                </div>
+                <button onclick="runCppSimulation()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs px-3 py-1 rounded font-medium transition">
+                    <i class="fa-solid fa-play mr-1"></i> Run Program
+                </button>
+            </div>
+            <!-- Terminal Body -->
+            <div class="p-6 bg-slate-950 text-emerald-400 font-code text-sm min-h-[220px] max-h-[300px] overflow-y-auto" id="terminal-output">
+                <p class="text-slate-500">// Klik tombol "Run Program" di atas untuk menjalankan kode C++</p>
+                <p class="text-blue-400">#include &lt;iostream&gt;</p>
+                <p class="text-blue-400">#include &lt;string&gt;</p>
+                <p class="text-slate-300">using namespace std;</p>
+                <p class="text-yellow-400">int main() {</p>
+                <p class="pl-4 text-slate-300">cout &lt;&lt; "Nama: M. Hasan Safii" &lt;&lt; endl;</p>
+                <p class="pl-4 text-slate-300">cout &lt;&lt; "Keahlian: Coding, Troubleshooting, Animator" &lt;&lt; endl;</p>
+                <p class="pl-4 text-slate-300">cout &lt;&lt; "Status: Siap Berkolaborasi!" &lt;&lt; endl;</p>
+                <p class="pl-4 text-slate-300">return 0;</p>
+                <p class="text-yellow-400">}</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Kontak -->
+    <footer id="kontak" class="bg-slate-950 py-12 px-4 border-t border-slate-800 text-center">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h2 class="text-2xl font-bold mb-4">Mari Terhubung</h2>
+            <p class="text-slate-400 mb-6">Punya proyek atau ingin berdiskusi seputar teknologi dan animasi? Hubungi saya kapan saja.</p>
+            <div class="flex justify-center gap-6 text-xl mb-8">
+                <a href="https://wa.me/6289697005455" target="_blank" class="glass-card w-12 h-12 rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="glass-card w-12 h-12 rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:email@example.com" class="glass-card w-12 h-12 rounded-full flex items-center justify-center text-blue-400 hover:scale-110 transition">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p class="text-xs text-slate-500">© 2026 M. Hasan Safii. Dibuat dengan estetik untuk GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- Script Animasi & Fungsionalitas -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Toggle Dark / Light Mode
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                document.body.classList.remove('bg-darkBg', 'text-slate-100');
+                document.body.classList.add('bg-slate-50', 'text-slate-900');
+                themeIcon.classList.remove('fa-moon', 'text-blue-400');
+                themeIcon.classList.add('fa-sun', 'text-amber-500');
+                themeText.innerText = 'Mode Gelap';
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                document.body.classList.remove('bg-slate-50', 'text-slate-900');
+                document.body.classList.add('bg-darkBg', 'text-slate-100');
+                themeIcon.classList.remove('fa-sun', 'text-amber-500');
+                themeIcon.classList.add('fa-moon', 'text-blue-400');
+                themeText.innerText = 'Mode Terang';
+            }
+        }
+
+        // Simulasi Output Terminal C++
+        function runCppSimulation() {
+            const terminal = document.getElementById('terminal-output');
+            terminal.innerHTML = `
+                <p class="text-slate-500">// Mengkompilasi program C++...</p>
+                <p class="text-slate-400">$ g++ portfolio.cpp -o portfolio</p>
+                <p class="text-slate-400">$ ./portfolio</p>
+                <p class="text-emerald-400 mt-2 font-bold">=== OUTPUT PROGRAM ===</p>
+                <p class="text-slate-200">Nama: M. Hasan Safii</p>
+                <p class="text-slate-200">Alamat: Ds. Sumber Slorok, Garum, Blitar</p>
+                <p class="text-slate-200">Keahlian: Coding, Troubleshooting Komputer, Animator</p>
+                <p class="text-slate-200">Hobi: Baca Manga, Nonton Anime</p>
+                <p class="text-emerald-400 mt-2">[Program selesai dieksekusi dengan sukses (0 error)]</p>
+            `;
+        }
+    </script>
+</body>
+</html>
